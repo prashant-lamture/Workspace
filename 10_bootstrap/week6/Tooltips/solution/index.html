@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tooltips</title>
+    <link href="/lib/bootstrap/5.3.3/css/bootstrap.css" rel="stylesheet" />
+    <script src="/lib/jquery/3.7.1/js/jquery-3.7.1.slim.min.js"></script>
+    <script src="/lib/popperjs/2.11.8/js/popperjs-2.11.min.js"></script>
+    <script src="/lib/bootstrap/5.3.3/js/bootstrap.min.js"></script>
+    <script>
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Tooltips</h1>
+    <button
+      type="button"
+      class="btn btn-secondary"
+      data-toggle="tooltip"
+      data-placement="top"
+      title="Tooltip on top"
+    >
+      Tooltip on top
+    </button>
+    <button
+      type="button"
+      class="btn btn-secondary"
+      data-toggle="tooltip"
+      data-placement="right"
+      title="Tooltip on right"
+    >
+      Tooltip on right
+    </button>
+    <button
+      type="button"
+      class="btn btn-secondary"
+      data-toggle="tooltip"
+      data-placement="bottom"
+      title="Tooltip on bottom"
+    >
+      Tooltip on bottom
+    </button>
+    <button
+      type="button"
+      class="btn btn-secondary"
+      data-toggle="tooltip"
+      data-placement="left"
+      title="Tooltip on left"
+    >
+      Tooltip on left
+    </button>
+  </body>
+</html>

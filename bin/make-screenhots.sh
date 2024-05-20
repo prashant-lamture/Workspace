@@ -12,10 +12,14 @@ find . -name *.html 				|\
 grep -v node_modules 				|\
 while read FILE
 do
-	SHOT=${FILE/.html/.png};
-	SHOT=${SHOT/solution/exercise};
+	SHOT="${FILE/.html/.png}"
+	SHOT="${SHOT/solution/exercise}"
+
+	FLDR="${SHOT%/*}"
+	SHOT="${FLDR}/SOLUTION.png"
+
 	echo "$FILE -> $SHOT"
 
-	node $BASE/screenshot.js  $FILE $SHOT
+	node $BASE/screenshot.js  "$FILE" "$SHOT"
 done
 

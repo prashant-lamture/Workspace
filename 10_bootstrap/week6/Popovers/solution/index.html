@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Popovers</title>
+    <link href="/lib/bootstrap/5.3.3/css/bootstrap.css" rel="stylesheet" />
+
+    <script src="/lib/jquery/3.7.1/js/jquery-3.7.1.slim.min.js"></script>
+    <script src="/lib/popperjs/2.11.8/js/popperjs-2.11.min.js"></script>
+    <script src="/lib/bootstrap/5.3.3/js/bootstrap.min.js"></script>
+    <script>
+      $(function () {
+        $('[data-toggle="popover"]').popover();
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Popovers</h1>
+    <button
+      type="button"
+      class="btn btn-lg btn-danger"
+      data-toggle="popover"
+      title="Popover title"
+      data-content="And here's some amazing content. It's very engaging. Right?"
+    >
+      Click to toggle popover
+    </button>
+  </body>
+</html>

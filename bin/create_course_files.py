@@ -1,7 +1,15 @@
+#!/usr/bin/env python
+
 import os
 import zipfile
 
-from course_content import course_content
+# from course_content.course_02_javascript import course_content
+# from course_content.course_10_bootstrap import course_content
+from course_content.course_11_tailwindcss import course_content
+
+ROOT = "02_javascript"
+ROOT = "10_bootstrap"
+ROOT = "11_tailwindcss"
 
 
 def create_zipfile(week):
@@ -13,18 +21,20 @@ def create_zipfile(week):
                 filepath = os.path.join(foldername, filename)
                 zipf.write(filepath, os.path.relpath(filepath, week))
 
-    # Move the zip file to the appropriate location for downloading
-    # shutil.move(zip_filename, f"/mnt/data/{zip_filename}")
-
 
 # Function to create files and zip them
-def create_week_files(folder, html, js, readme):
-    with open(os.path.join(folder, "index.html"), "w") as html_file:
-        html_file.write(html.strip())
+def create_week_files(folder, html, css, js, readme):
+    if html is not None:
+        with open(os.path.join(folder, "index.html"), "w") as html_file:
+            html_file.write(html.strip())
 
-    # Write JavaScript file
-    with open(os.path.join(folder, "script.js"), "w") as js_file:
-        js_file.write(js.strip())
+    if css is not None:
+        with open(os.path.join(folder, "styles.css"), "w") as js_file:
+            js_file.write(js.strip())
+
+    if js is not None:
+        with open(os.path.join(folder, "script.js"), "w") as js_file:
+            js_file.write(js.strip())
 
     # Write README file
     with open(os.path.join(folder, "README.md"), "w") as readme_file:
@@ -33,34 +43,29 @@ def create_week_files(folder, html, js, readme):
 
 def create_course_files(course_content):
     for week, exercises in course_content.items():
-        os.makedirs(week, exist_ok=True)
-
         for exercise in exercises:
             exercise_name = exercise["name"]
 
-            exercise_dir = os.path.join(week, exercise_name, "exercise")
+            exercise_dir = os.path.join(ROOT, week, exercise_name, "exercise")
             os.makedirs(exercise_dir, exist_ok=True)
 
-            create_week_files(
-                exercise_dir, "", "", exercise["readme"]
-            )
+            create_week_files(exercise_dir, None, None, None, exercise["readme"])
 
-            solution_dir = os.path.join(week, exercise_name, "solution", )
+            solution_dir = os.path.join(
+                ROOT,
+                week,
+                exercise_name,
+                "solution",
+            )
             os.makedirs(solution_dir, exist_ok=True)
 
-            create_week_files(
-                solution_dir, exercise["html"], exercise["js"], exercise["readme"]
-            )
-            # with open(os.path.join(exercise_dir, "index.html"), "w") as html_file:
-            #     html_file.write(exercise["html"].strip())
+            html = exercise["html"] if "html" in exercise else ""
+            js = exercise["js"] if "js" in exercise else None
+            css = exercise["css"] if "css" in exercise else None
 
-            # # Write JavaScript file
-            # with open(os.path.join(exercise_dir, "script.js"), "w") as js_file:
-            #     js_file.write(exercise["js"].strip())
+            print(f"create {solution_dir} ({len(html)})")
 
-            # # Write README file
-            # with open(os.path.join(exercise_dir, "README.md"), "w") as readme_file:
-            #     readme_file.write(exercise["readme"].strip())
+            create_week_files(solution_dir, html, css, js, exercise["readme"])
 
 
 # Call the function to create the course files and zip them
