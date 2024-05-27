@@ -1,0 +1,20 @@
+toc = [
+    {"part": 1, "chapter": 1, "content": "Introduction to Rust"},
+    {"part": 1, "chapter": 2, "content": "Basic Syntax and Language Elements"},
+    {"part": 1, "chapter": 3, "content": "Variables, Data Types, and Operators"},
+    {"part": 1, "chapter": 4, "content": "Control Flow: If-Else Statements and Loops"},
+    {"part": 1, "chapter": 5, "content": "Functions: Defining and Calling"},
+    {"part": 1, "chapter": 6, "content": "Error Handling and Debugging"},
+    {"part": 2, "chapter": 1, "content": "Patterns: Matching and Extraction"},
+    {"part": 2, "chapter": 2, "content": "Components: Crates and Modules"},
+    {"part": 2, "chapter": 3, "content": "Framework Basics: Cargo and CLI Tools"},
+    {"part": 2, "chapter": 4, "content": "Concurrency: Threads and Async"},
+    {"part": 2, "chapter": 5, "content": "Error Handling and Testing"},
+    {"part": 2, "chapter": 6, "content": "Advanced Topics in Patterns and Components"},
+    {"part": 3, "chapter": 1, "content": "Best Practices for Writing Rust Code"},
+    {"part": 3, "chapter": 2, "content": "Features: Traits, Enums, and Structs"},
+    {"part": 3, "chapter": 3, "content": "Tips and Tricks for Efficient Rust Development"},
+    {"part": 3, "chapter": 4, "content": "Advanced Topics in Error Handling and Debugging"},
+    {"part": 3, "chapter": 5, "content": "Performance Optimization Techniques"},
+    {"part": 3, "chapter": 6, "content": "Rust Ecosystem: Libraries, Frameworks, and Tools"}
+]
