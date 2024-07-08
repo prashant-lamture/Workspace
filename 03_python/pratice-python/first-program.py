@@ -1,1 +1,1 @@
-print("welcome to india please uncle, I am waiting to you")
+print("welcome to india please uncle, I am waiting for you")
