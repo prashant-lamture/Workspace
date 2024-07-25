@@ -85,9 +85,20 @@
 
 
 # Insert value
-List3=['Prashant','Athnag']
-List3.append("Riyansh")
-print(List3)
+# List3=['Prashant','Athnag']
+# List3.append("Riyansh")
+# print(List3)
+
+
+#Delete Value
+
+list4=['Athang','Riyansh','Shiva']
+print(list4)
+print("After Deleting :")
+list4.remove('Shiva')
+print(list4)
+
+
 
 
 
