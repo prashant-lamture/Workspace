@@ -8,7 +8,7 @@
 # print (a[2]) #modifier
 
 
-# #Dictionary...// Use Key & Value Pair
+# Dictionary...// Use Key & Value Pair
 
 # a={ 1:"a","b":2,3:"a"}
 # print(a.keys())
@@ -25,7 +25,7 @@
 #     print("Odd Numeber: ")
 
 
-# #ONLY ODD NUMBERS
+# ONLY ODD NUMBERS
 # i=1
 # n=int(input("Enter Number")) #TAKE INPUT FROM USER
 # while i<=n:
@@ -34,7 +34,7 @@
 #         i=i+1
 
 
-# ########
+########
 # x=[1,2]
 # y=[4,5]
 # for i in x:
@@ -42,7 +42,7 @@
 #       print(i,j)
 
 
-# #SUBTRACTION OPERATOR
+# SUBTRACTION OPERATOR
 
 # val1 = 20
 # val2 = 10
@@ -50,14 +50,14 @@
 # print(yes)
 
 
-# #BREAK STATEMENT
+# BREAK STATEMENT
 
 # for b in range(10):
 #     if b>5:
 #         break
 #     print(b)
 
-# #SLICING OPERATOR
+# SLICING OPERATOR
 
 # n=str(input("Enter String: "))
 # print("Original String")
@@ -67,7 +67,7 @@
 
 
 
-#FUNCTION DEFINITION 
+# FUNCTION DEFINITION 
 
 # def calculate_sum(a,b): #PARAMETES
 #     return a*b
@@ -83,22 +83,33 @@
 # list2[2]="17-Dec"
 # print(list2)
 
-
 # Insert value
+
 # List3=['Prashant','Athnag']
 # List3.append("Riyansh")
 # print(List3)
 
 
-#Delete Value
+# Delete Value
 
-list4=['Athang','Riyansh','Shiva']
-print(list4)
-print("After Deleting :")
-list4.remove('Shiva')
-print(list4)
+# list4=['Athang','Riyansh','Shiva']
+# print(list4)
+# print("After Deleting :")
+# list4.remove('Shiva')
+# print(list4)
+
+# Count()Method
+
+#list5=['p','r','a','s','h','a','n','t','l','a','m','t','u','r','e']
+#print(list5.count('t'))
 
 
 
 
 
+# n = 1
+# for i in range(1, 5):
+#     for j in range(1,i+1):
+#         print(n, end='  ')
+#         n =n+1
+#         print()
