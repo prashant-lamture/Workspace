@@ -103,13 +103,26 @@
 #list5=['p','r','a','s','h','a','n','t','l','a','m','t','u','r','e']
 #print(list5.count('t'))
 
-
-
-
-
-# n = 1
 # for i in range(1, 5):
-#     for j in range(1,i+1):
-#         print(n, end='  ')
-#         n =n+1
+#     for j in range(1, i+1):
+#         print('*', end='  ')
 #         print()
+
+
+
+n = int(input("Enter a number: ")) 
+sum = 0
+length = len(str(n))
+temp = n
+
+while temp > 0:
+    digit = temp % 10
+    sum += digit ** length
+    temp //= 10
+
+if sum == n:
+    print("Armstrong Number")
+else:
+    print("Not Armstrong Number")
+
+
